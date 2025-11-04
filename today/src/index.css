@@ -1,0 +1,13 @@
+@import "tailwindcss";
+@plugin '@tailwindcss/typography';
+
+html { scroll-behavior: smooth; }
+
+@keyframes gradientShift {
+  0% { transform: translate3d(0,0,0); filter: hue-rotate(0deg); }
+  50% { transform: translate3d(0, -1%, 0); filter: hue-rotate(20deg); }
+  100% { transform: translate3d(0,0,0); filter: hue-rotate(0deg); }
+}
+
+/* Utility to support animate-[gradientShift] if needed */
+.animate-gradientShift { animation: gradientShift 8s ease infinite; }
